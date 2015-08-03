@@ -1,0 +1,236 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*
+
+/* Elements */
+* {
+	color: #202020;
+}
+
+html, body {
+	height: 100%;
+}
+
+img.normal {height:auto;}
+img.small {width:30%;}
+img.big {height:35%;}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #800000;
+	font-family: "Helvetica", Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+  	color: #182F7C;
+	font-family: "Helvetica", Arial, Helvetica, sans-serif;
+}
+
+h4, h5, h6 {
+}
+
+p, ol, ul, dl, blockquote {
+	margin-top: 0;
+}
+
+b {
+
+}
+
+a {
+}
+
+a:hover {
+	text-decoration: none;
+	color: #52A3CC;
+}
+/*
+a:visited a:hover {
+  text-decoration: none;
+  color: #660066;
+}
+*/
+
+/* Wrapper */
+
+#wrapper {
+	width: 800px;
+	height: 100%;
+	min-height: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+html>body #wrapper {
+	height: auto;
+}
+
+/* Header */
+
+#header {
+	width: 800px;
+	height: 90px;
+  padding-bottom: 3px;
+	background: #000000;
+  font-size: 1em;
+	color: #D0D0D0;
+}
+
+#header h1 {
+	float: left;
+	padding: 10px 0 0 15px;
+	font-size: 3em;
+	letter-spacing: -2px;
+  color: #FFFFFF;
+}
+
+#header h2 {
+	float: right;
+	padding: 10px 20px 0 0;
+	font-size: 1.25em;
+	letter-spacing: -1px;
+}
+
+#header table, #header th, #header td {
+  font-size: 1.05em;
+  color: #D0D0D0;
+}
+#header b {
+  color: #F8F8F8;
+}
+
+#header a {
+	text-decoration: none;
+	color: #D0D0D0;
+}
+
+/* Menu */
+
+#menu {
+	width: 800px;
+	height: 33px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+        background:#dddddd;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 33px;
+	padding: 0px 20px 4px 4px;
+  font-size: 1.1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+#menu td {
+    border-right: 2px dotted dimgray;
+}
+
+
+
+#menu a:hover {
+    color: #032782;
+}
+
+#menu a:active {
+    color: #032782;
+}
+
+.currentLink {
+   color: #032782;
+}
+ 
+/* Content */
+
+#content {
+	width: 760px;
+	background: #FFFFFF; 
+  padding-top: 20px;
+	padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#content h2 {
+	margin-bottom: 1em;
+	
+}
+
+#content h3 {
+  font-size:1.25em;
+	margin-bottom: 0.25em;
+color: #182F7C;
+	
+}
+
+#content ul {
+  padding-bottom: 5px;
+}
+
+#colOne {
+	float: right;
+	width: 500px;
+	padding: 20px 20px 0 20px;
+}
+
+#colTwo {
+	float: left;
+	width: 180px;
+	padding: 20px 20px 0 20px;
+}
+
+#colTwo ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-position: inside;
+}
+
+/* Footer */
+
+#footer {
+	width: 800px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0 0 0;
+	text-align: center;
+	font-size: small;
+  color: #F0F0F0
+}
+
+/* News */
+
+#news {
+	width: 97%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+        background:#dddddd;
+	float:inline;
+}
+
+tr.spaceUnder > td
+{
+  padding-bottom: 2em;
+}
