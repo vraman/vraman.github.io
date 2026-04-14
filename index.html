@@ -1,333 +1,352 @@
-<!DOCTYPE html 
-     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  
-<title>Vasu Raman</title>
-<meta name="Vasu Raman is a roboticist based in San Francisco. She is passionate about safe autonomy for robots that solve real problems." content="" />
-<meta name="google-site-verification" content="-7qZnnAWS5Dp4S7IMyEi_Xs3WGrOBs9PqF0z1d5eYks" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vasu Raman</title>
+  <meta name="description" content="Engineer, founder, CTO. Shipping autonomous systems that manipulate the physical world.">
 
-<link href="style.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vasu Raman">
+  <meta property="og:description" content="It's all about the atoms now. My goal is to ship autonomous systems that manipulate the physical world.">
+  <meta property="og:image" content="https://vraman.github.io/assets/og-image.png">
+  <meta property="og:url" content="https://vraman.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vasu Raman">
+  <meta name="twitter:description" content="It's all about the atoms now. My goal is to ship autonomous systems that manipulate the physical world.">
+  <meta name="twitter:image" content="https://vraman.github.io/assets/og-image.png">
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  ga('create', 'UA-49573602-1', 'auto');
-  ga('send', 'pageview');
+  <!-- Analytics: Plausible (activate when account is ready) -->
+  <!-- <script defer data-domain="vraman.github.io" src="https://plausible.io/js/script.js"></script> -->
 
-</script>
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --text: #2d2926;
+      --text-secondary: #6e5f54;
+      --accent-structural: #0055d4;
+      --accent-warm: #b85c38;
+      --border: #d4cec6;
+      --link: #2d2926;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+      --grid: 0.5rem;
+      --body-weight: 300;
+    }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1e1a17;
+        --text: #e8e0d6;
+        --text-secondary: #a89a8e;
+        --accent-structural: #6ba3e8;
+        --accent-warm: #d4845a;
+        --border: #3a3330;
+        --link: #e8e0d6;
+        --body-weight: 400;
+      }
+    }
 
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: var(--body-weight);
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.7;
+      letter-spacing: 0.005em;
+      animation: enter 400ms ease-out both;
+    }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+    }
+
+    /* Left vertical rule — structural spine (from Engineering Drawing) */
+    .page::before {
+      content: '';
+      position: absolute;
+      left: -1rem;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--accent-structural);
+      opacity: 0.3;
+    }
+
+    @media (max-width: 48rem) {
+      .page::before { display: none; }
+    }
+
+    /* ---- Header ---- */
+    header {
+      padding-top: clamp(1.5rem, 4vh, 3rem);
+      padding-bottom: calc(var(--grid) * 6);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Name — from Quiet Confidence: large, confident display serif */
+    .name {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6.5vw, 4rem);
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: -0.015em;
+      line-height: 1.05;
+      margin-bottom: calc(var(--grid) * 3);
+    }
+
+    /* Intro — body font, a statement not a quotation */
+    .intro {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-style: normal;
+      font-weight: var(--body-weight);
+      color: var(--text-secondary);
+      line-height: 1.55;
+      max-width: 30em;
+      margin-bottom: calc(var(--grid) * 4);
+    }
+
+    /* Social — monospace lowercase (from Engineering Drawing) */
+    .links {
+      display: flex;
+      gap: calc(var(--grid) * 3);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      position: relative;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--accent-structural);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    a:hover::after,
+    a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    a:focus-visible {
+      outline: 1.5px solid var(--accent-structural);
+      outline-offset: 3px;
+    }
+
+    .email-link {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .copied {
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: var(--accent-structural);
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .copied.show { opacity: 1; }
+
+    /* ---- Section label — monospace, accent (from Engineering Drawing) ---- */
+    .label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-structural);
+      margin-bottom: calc(var(--grid) * 3);
+    }
+
+    /* ---- About ---- */
+    .about {
+      padding: calc(var(--grid) * 4) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about p {
+      margin-bottom: 1.3em;
+      max-width: 65ch;
+    }
+
+    .about p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* Company names — bold monospace (from Engineering Drawing) */
+    a.co {
+      font-family: var(--font-mono);
+      font-size: 0.86em;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--text);
+    }
+
+    /* ---- Aside ---- */
+    .aside {
+      padding: calc(var(--grid) * 5) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .aside p {
+      font-family: var(--font-body);
+      font-weight: var(--body-weight);
+      color: var(--text-secondary);
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      padding: calc(var(--grid) * 5) 0 calc(var(--grid) * 4);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .footer-left {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: calc(var(--grid) * 2.5);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    .footer-nav a {
+      color: var(--text-secondary);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+
+      footer {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
-<body>    
-<div id="wrapper">              
-  <div id="header">
-    <table border=0 width=100%>
-      <tr>
-        <td><h1><a href="index.html">Vasu Raman</a></h1></td>
+<body>
 
+  <div class="page">
+    <header>
+      <h1 class="name">Vasu Raman</h1>
+      <p class="intro">It's all about the atoms now. My goal is to ship autonomous systems that manipulate the physical world.</p>
+      <nav class="links" aria-label="Contact">
+        <a href="#" class="email-link" aria-label="Copy email address">
+          email
+          <span class="copied" aria-hidden="true">copied</span>
+        </a>
+        <a href="https://linkedin.com/in/vasumathi-raman" rel="noopener" target="_blank">linkedin</a>
+        <a href="https://scholar.google.com/citations?user=9_QWXrsAAAAJ&hl=en" rel="noopener" target="_blank">scholar</a>
+      </nav>
+    </header>
 
-   
-	   <td align="right">
-		
-		[vasumathi.raman AT gmail]
-		
-		<p>
-		  <b><font size="5"><a href="vraman_resume.pdf"target="blank"><img src="figures/cv_logo.png" height=25></a></font></b>
-		  <a href="http://twitter.com/likeavass" target="blank"><img src="figures/twitter_logo.svg" width=25></a>
-		  <a href="https://www.linkedin.com/in/vasumathi-raman/" target="blank"><img src="figures/linkedin_logo.png" width=25></a>
-	   </td>
-      </tr>
-    </table>
+    <main>
+      <section class="about">
+        <div class="label" aria-hidden="true">About</div>
+        <p>I'm an engineer and founder based in the Bay Area. My career has been a series of "firsts" in autonomy&thinsp;&mdash;&thinsp;I keep showing up early at companies and then building the thing that hasn't been built yet.</p>
+
+        <p>Most recently I co-founded <a href="https://sauron.systems" class="co" rel="noopener" target="_blank">Sauron</a> with Kevin Hartz to build a new kind of home security&thinsp;&mdash;&thinsp;one that uses the full perception and autonomy stack of a self-driving car to protect people where they live. As CTO, I built the technical architecture, recruited the team, and took the company from zero to first customer deployments.</p>
+
+        <p>Before that, I spent four and a half years at <a href="https://zipline.com" class="co" rel="noopener" target="_blank">Zipline</a>, where I led vehicle behaviors across their drone platforms. My team's work was the foundation for the FAA's first-ever authorization of commercial beyond-visual-line-of-sight drone deliveries in the US. Before <a href="https://zipline.com" class="co" rel="noopener" target="_blank">Zipline</a>, I was the first behavior prediction hire at <a href="https://nuro.ai" class="co" rel="noopener" target="_blank">Nuro</a>, where I helped enable the world's first unmanned commercial deliveries. And before that, I was an early engineer at <a href="https://zoox.com" class="co" rel="noopener" target="_blank">Zoox</a>, leading decision planning for their first autonomous rides on public streets in San Francisco.</p>
+
+        <p>I have a PhD in Computer Science from Cornell and did a postdoc at Caltech before turning down R1 faculty offers to build things that ship. My research on formal methods for safe autonomy has been cited over 3,000 times.</p>
+      </section>
+
+      <section class="aside">
+        <p>I once won Best Pun at the Bay Area Pun-Off.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span class="footer-left">Vasu Raman &copy; 2026</span>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#" class="email-link-footer" aria-label="Copy email address">email</a>
+        <a href="https://linkedin.com/in/vasumathi-raman" rel="noopener" target="_blank">linkedin</a>
+        <a href="https://scholar.google.com/citations?user=9_QWXrsAAAAJ&hl=en" rel="noopener" target="_blank">scholar</a>
+      </nav>
+    </footer>
   </div>
-  
-  <div id="menu">
-    <h2><a href ="#"><span class="currentLink">About Me</span></a></h2>
-    <h2> <a href = "projects.html">Projects</a></h2>
-    <h2><a href="#pubs">Publications</a></h2>
-    <h2><a href="tools.html">Tools</a></h2>
-    <h2><a href="index.html#misc">Misc.</a></h2>
-    <h2><a href="contact.html">Contact</a></h2>	
-  </div>
 
-  <div id="content">
-  <table cellpadding=8>
-    <tr>      
-      <td width="30%" align="center" style="vertical-align: top;"><img src="vasu_resize.jpg"></td>
-      <td>
-	 I am a roboticist based in the San Francisco Bay Area with over a decade of experience in robotics as a researcher and engineer. I am currently at <a href="https://flyzipline.com/">Zipline</a>, where I work on behavior planning for a fleet of drones that deliver life-saving medical supplies around the world. I was previously at <a href="https://nuro.ai/">Nuro</a> and <a href="https://zoox.com/">Zoox</a>, building key elements of prediction and planning for self-driving cars, and at the <a href="http://www.utrc.utc.com/">United Technologies Research Center</a>, leading projects on formal verification of jet engine control logic and disaster management for smart buildings. 
-	 <p><p>
-	 I specialize in behaviour and motion planning algorithms for autonomous systems, and in scalable methods for guaranteeing correctness with respect to formal specifications. I am driven by safety-critical systems performing complex tasks in interactive environments. I enjoy fusing technical and creative perspectives from formal methods for software verification, hybrid systems, robotics, control and game theory.
-	 	 	 
-	 <p>I earned a Ph.D. in 2013 from the <a href="http://www.cs.cornell.edu/">Department of Computer Science</a> at
-	 <a href="http://www.cornell.edu/">Cornell University</a>, where I was advised by <a href="http://verifiablerobotics.com/">Hadas Kress-Gazit</a>
-	 and affiliated with the <a href="http://cornell-asl.org">Autonomous Systems Lab</a> and the
-	 <a href="http://ltlmop.github.com/">LTLMoP Project</a>. My <a href="phdthesis.html" target="blank">dissertation</a> addressed challenges
-	 in the synthesis of provably correct control for robotics. I was a <a href="http://www.cms.caltech.edu/">Computing and Mathematical Sciences</a> postdoctoral scholar at the <a href="http://www.caltech.edu/">California Institute of Technology</a>, where I worked with <a href="http://www.cds.caltech.edu/~murray/">Richard Murray</a> and <a href="http://www.eecs.berkeley.edu/~sseshia/">Sanjit Seshia</a>.
-	 I also hold a B.A. in Computer Science and Mathematics from <a href = "http://www.wellesley.edu/">Wellesley College</a>.
-      </td>
-    </tr>
-    
-    </table>
-    <!--<table>
-    <tr>
-      <td width="45%"></td>
-      <td>
-	<p><b><h3>Contact Information:</h3></b>		
-		  Department of Computing and Mathematical Sciences<br>
-		  California Institute of Technology<br>
-		  1200 E California Blvd, Mail Code 305-16<br>
-		  Pasadena, CA 91125<br>
-		  Phone: +1 607 216-8623<br>
-		  Email: vasu AT caltech DOT edu
-      </td>
-    </tr>
-    </table>-->
-    
-    <br>
-      <div id="news">
-	<h3>News</h3>
-	<ul>
-	  <li> <b>Sept 19: </b> Women in Robotics <a href="https://www.eventbrite.com/e/women-in-robotics-tech-talk-hosted-by-women-of-nuro-tickets-69062587057">Tech Talk</a> at Nuro HQ in Mountain View, CA, USA.
-	</ul>
-	<i>Recent:</i>
-	<ul>
-          <lt> <b>June 17: </b> Invited talk at the <a href="https://inic8.bitbucket.io/DThree19/index.html">DThree19</a> workshop at <a href="http://cvpr2019.thecvf.com/">CVPR 2019</a> in Long Beach, CA, USA.
-	 </ul>
-      </div>
-      <br>
-    <a name="pubs"></a>
-    <br>
-    <h3>Key Academic Research Projects</h3>
-    <ul>
-      <li><a href="projects.html#scaling" target="blank">Scalable Task & Motion Planning with Temporal Logic Specifications</a></li>
-      <li><a href="projects.html#stl2mpc" target="blank">Model Predictive Control Synthesis from Timed Logics</a></li>
-      <li><a href="projects.html#multirobot" target="blank">Provably Correct Control for Collaborative Robot Teams</a></li>
-      <li><a href="projects.html#rhc" target="blank">Scaling Receding Horizon Control Synthesis for LTL</a></li>
-      <li><a href="projects.html#fastslow" target="blank">Timing Semantics for Controller Synthesis from High-Level Specifications</a></li>
-      <li><a href="projects.html#unsynth" target="blank">Explaining Unsynthesizable Specifications For High-Level Robot Behavior</a></li>
-      <li><a href="projects.html#zk" target="blank">Epistemic Characterization of Cryptographic Concepts Using Modal Logic</a></li>
-      <li><a href="projects.html#others" target="blank">Others</a></li>
-    </ul>
-     <a name="pubs"></a>
-    <h3>Journal Articles</h3>
-    <ul>
-		
-<!--      <li><u>V. Raman</u>, H. Kress-Gazit, <b>Unsynthesizable Cores -- Minimal Explanations for Unsynthesizable High-Level Robot Behaviors</b>, In submission.</li> 
--->
+  <script>
+    var addr = ['vasumathi.raman', 'gmail.com'].join('@');
+    document.querySelectorAll('.email-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(addr).then(function() {
+          var tip = el.querySelector('.copied');
+          tip.classList.add('show');
+          setTimeout(function() { tip.classList.remove('show'); }, 1400);
+        });
+      });
+    });
+    document.querySelectorAll('.email-link-footer').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(addr);
+      });
+    });
+  </script>
 
-            
-	<li> J. A. DeCastro, J. Alonso-Mora, <u>V. Raman</u>, D. Rus and H. Kress-Gazit, <b>Reactive mission and motion planning with deadlock resolution avoiding dynamic obstacles</b>, <i>Autonomous Robots</i>, 2017.
-	
-	<li> S. Jha, <u>V. Raman</u>, D. Sadigh, S. A. Seshia, <b>Safe Autonomy Under Perception Uncertainty Using Chance-Constrained Temporal Logic</b>, <i>Journal of Automatic Reasoning</i>, 2017.
-
-        <li>C. Lignos, <u>V. Raman</u>, C. Finucane, M. Marcus, H. Kress-Gazit, <b>Provably Correct Reactive Control from Natural Language</b>,  <i>Autonomous Robots</i>, 38(1): 89-105, 2015. <a href="papers/vraman_auro_15.pdf" target="blank">[pdf]</a></li>
-
-	<li><u>V. Raman</u>, N. Piterman, C. Finucane, H. Kress-Gazit, <b>Timing Semantics for Abstraction and Execution of
-Synthesized High-Level Robot Control</b>, <i>IEEE Transactions on Robotics</i>, 31(3): 591-604, 2015. <a href="papers/vraman_tro_15.pdf" target="blank">[pdf]</a></li>
-
-	<li><u>V. Raman</u>, H. Kress-Gazit, <b>Explaining Impossible High-Level Robot Behaviors</b>, <i>IEEE Transactions on Robotics</i>, 29(1): 94-104, 2013.     
-<a href="papers/vraman_tro_13.pdf" target="blank">[pdf]</a>
-
-  </ul>
-
-<h3>Conference Publications</h3>
-<h4>2017</h4>
-<ul id="2017">
-            <li>D. Tsai, Y. Shoukry, M. K. Lee, <u>V. Raman</u>, <b>Towards a Socially Responsible Smart City: Dynamic Resource Allocation for Smarter Community Service</b>, <i>BuildSys 2017<i>.
-            
-            <li>C. Vasile, <u>V. Raman</u>, S. Karaman, <b>Sampling-Based Synthesis of Maximally-Satisfying Controllers for Temporal Logic Specifications</b>, <i>IROS 2017</i>.
-            <li>C. Paxton, <u>V. Raman</u>, G. Hager, M. Kobilarov, <b>Combining Neural Networks and Tree Search for Task and Motion Planning in Challenging Environments</b>, <i>IROS 2017</i>.
-	      
-            <li>S. Jha, <u>V. Raman</u>, T. Sahai, A. Pinto, M. Francis, <b>On Learning Sparse Boolean Formulae For Explaining AI Decisions</b>, <i>NFM 2017</i>.
-
-	    </ul>
-<h4>2016</h4>
-<ul id="2016">
-            <li>S. Jha, <u>V. Raman</u>, S. A. Seshia, <b>On ∃ ∀ ∃! Solving: A Case Study on Automated Synthesis of Magic Card Tricks</b>, <i>FMCAD 2016</i>.
-
-	    <li>S. Jha, <u>V. Raman</u>, <b>Towards Automated Synthesis of Stochastic Linear Hybrid Systems Controllers</b>, <i>FORMATS 2016</i>.
-	      <a href="">[pdf]</a>
-	    <li>R. Ehlers, <u>V. Raman</u>, <b>Slugs: Extensible GR(1) Synthesis (Tool Paper)</b>, <i>CAV 2016</i>.
-	      <a href="">[pdf]</a>
-	    <li>Y. Wu, <u>V. Raman</u>, S. Lafortune, S. A. Seshia, <b>Obfuscator Synthesis for Privacy and Utility</b>, <i>NFM 2016</i>.
-	    <a href="">[pdf]</a>
-	    <li>S. Jha, <u>V. Raman</u>, <b>Automated Synthesis of Safe Autonomous Vehicle Control Under Perception Uncertainty</b>, <i>NFM 2016</i>.
-	    <a href="">[pdf]</a>
-
-            <li>S. Ghosh, D. Sadigh, P. Nuzzo, <u>V. Raman</u>, A. Donz&eacute;, A. Sangiovanni-Vincentelli, S. S. Sastry, S. A. Seshia, <b>Diagnosis and Repair for Synthesis from Signal Temporal Logic Specifications</b>, <i>HSCC 2016</i>.
-	      <a href="papers/vraman_hscc_16.pdf">[pdf]</a>
-
-	    </ul>
-<h4>2015</h4>
-<ul id="2015">
-
-            <li>J. DeCastro, J. Alonso-Mora, <u>V. Raman</u>, D. Rus, H. Kress-Gazit, <b>Collision-Free Reactive Mission and Motion Planning for Multi-Robot Systems</b>, <i>ISRR 2015</i>.
-	      <a href="papers/vraman_isrr_15.pdf">[pdf]</a>
-	      
-          <li>S. Farahani, <u>V. Raman</u>, R. M. Murray <b>Robust Model Predictive Control for Signal Temporal Logic Synthesis</b>, <i>ADHS 2015</i>.
-	      <a href="papers/vraman_adhs_15.pdf">[pdf]</a>
-	      
-          <li><u>V. Raman</u>, M. F&auml;lt, T. Wongpiromsarn, R. M. Murray, <b>Online Horizon Selection in Receding Horizon Temporal Logic Planning</b>, <i>IROS 2015</i>.
-	<a href="papers/vraman_iros_15.pdf">[pdf]</a>
-	
-        <li>J. DeCastro, <u>V. Raman</u>, H. Kress-Gazit, <b>Dynamics-Driven Adaptive Abstraction for Reactive High-Level Mission and Motion Planning</b>, <i>ICRA 2015</i>.
-	<a href="papers/vraman_icra_15.pdf">[pdf]</a>
-	
-        <li>M. F&auml;lt, <u>V. Raman</u>, R. M. Murray, <b>Variable Elimination for Scalable Receding Horizon Temporal Logic</b>, <i>ACC 2015</i>.
-	<a href="papers/vraman_acc_15.pdf">[pdf]</a>
-	
-        <li><u>V. Raman</u>, A. Donz&eacute;, D. Sadigh, R. M. Murray, S. A. Seshia, <b>Reactive Synthesis from Signal Temporal Logic Specifications</b>, <i>HSCC 2015</i>.
-	<a href="papers/vraman_hscc_15_corrected.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_hscc15.pdf">[slides]</a>
-
-	</ul>
-
-<h4>2014</h4>
-<ul id="2014">
-	
-	<li><u>V. Raman</u>, A. Donz&eacute;, M. Maasoumy, R. M. Murray, A. Sangiovanni-Vincentelli, S. A. Seshia, <b>Model Predictive Control with Signal Temporal Logic Specifications</b>, <i>CDC 2014</i>.
-	<a href="papers/vraman_cdc_14.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_cdc14.pdf">[slides]</a>
-    
-	<li><u>V. Raman</u>, <b>Reactive Switching Protocols for Multi-Robot High-Level Tasks</b>, <i>IROS 2014</i>.
-	  <a href="papers/vraman_iros_14.pdf">[pdf]</a>
-	  <a href="talks/vraman_talk_iros14.pdf">[slides]</a>
-	  <a href="talks/vraman_poster_iros14.pdf">[interactive presentation]</a> 
-
-	
-	<li><u>V. Raman</u>, H. Kress-Gazit, <b>Synthesis for Multi-Robot Controllers with Interleaved Motion</b>, <i>ICRA 2014</i>.
-	<a href="papers/vraman_icra_14.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_icra14.pdf">[slides]</a> 
-
-
-	</ul>
-
-<h4>2013</h4>
-<ul id="2013">
-  
-	<li><u>V. Raman</u>, H. Kress-Gazit, <b>Toward Minimal Explanations of Unsynthesizability for High-Level Robot Behaviors</b>, <i>IROS 2013</i>.
-	<a href="papers/vraman_iros_13.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_iros13.pdf">[slides]</a> 
-
-	<li><u>V. Raman</u>, C. Lignos, C. Finucane, M. Marcus, H. Kress-Gazit, <b>Sorry Dave, I'm Afraid I Can't Do That: Explaining Unachievable Robot Tasks Using Natural Language</b>, <i>RSS 2013</i>.
-	<a href="papers/vraman_rss_13.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_rss13.pdf">[slides]</a> 
-	<a href="talks/vraman_poster_rss13.pptx">[poster]</a>    
-
-      <li><u>V. Raman</u>, N. Piterman, H. Kress-Gazit, <b>Provably Correct Continuous Control for High-Level Robot Behaviors with Actions of Arbitrary Execution Durations</b>, <i>ICRA 2013</i>.  
-	<a href="papers/vraman_icra_13.pdf">[pdf]</a>
-
-	</ul>
-
-<h4>2012</h4>
-<ul id="2012">
-
-   <li><u>V. Raman</u>, C. Finucane, H. Kress-Gazit, <b>Temporal Logic Robot Mission Planning for Slow and Fast Actions</b>, <i>IROS 2012</i>.  
-	<a href="papers/vraman_iros12_FS.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_irosFS.pdf">[slides]</a>
-
-    <li><u>V. Raman</u>, B. Xu, H. Kress-Gazit, <b>Avoiding Forgetfulness: Structured English Specifications for High-Level Robot Control with Implicit Memory</b>, <i>IROS 2012</i>.      
-	<a href="papers/vraman_iros12_M.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_irosM.pdf">[slides]</a>
-
-    <li><u>V. Raman</u>, H. Kress-Gazit, <b>Automated feedback for unachievable high-level robot behaviors</b>, <i>ICRA 2012</i>.
-	<a href="papers/vraman_icra_12.pdf">[pdf]</a> |
-	<a href="talks/vraman_talk_icra12.pdf">[slides]</a> 
-	<a href="talks/vraman_shortICRA_vasu_final.mp4">[video]</a>
-
-	</ul>
-
-<h4>2011 and prior</h4>
-<ul id="2011 and prior">
-
-    <li><u>V. Raman</u>, H. Kress-Gazit, <b>Analyzing Unsynthesizable Specifications for High-Level Robot Behavior Using LTLMoP</b>, <i>CAV 2011</i>.     
-	<a href="papers/vraman_cav_11.pdf">[pdf]</a>
-	<a href="talks/vraman_talk_cav.pdf">[slides]</a> 
-
-    <li>J. Halpern, R. Pass, <u>V. Raman</u>, <b>An Epistemic Characterization of Zero Knowledge</b>, <i>TARK 2009</i>.      
-	<a href="papers/vraman_tark_09.pdf">[pdf]</a>
-	<a href="talks/vraman_slides_tark.pdf">[slides]</a> 
-	<a href="talks/vraman_poster_tark.pdf">[poster]</a>           
-
-</ul>
-
-    <h3>Workshop Publications</h3>
-<ul>
-        <li><u>V. Raman</u>, A. Donz&eacute, M. Maasoumy, <b>Model Predictive Control from Signal Temporal Logic
-Specifications: A Case Study (Work in Progress)</b>, <i>CyPhy 2014</i>.
-	  <a href="papers/vraman_cyphy_14.pdf">[pdf]</a>
-	  <a href="talks/vraman_talk_cyphy14.pdf">[slides]</a> 
-    
-	<li>R, Ehlers, <u>V. Raman</u>, <b>Low-effort Specification Debugging and Analysis</b>, <i>SYNT 2014</i>.
-	  <a href="papers/vraman_synt_14.pdf">[pdf]</a>
-
-
-    </ul>
-    
-
-    <a name="misc"></a>
-  <h3>Teaching and Advising</h3>
-  <p>I enjoy teaching and mentoring undergraduates, and have actively sought out relevant opportunities in and out of the classroom.
-
-    <ul>
-    <li>Instructor for Caltech Advanced Robotics course (ME 132B) <i>(Spring 2015)</i></li>
-    <li>Caltech Undergraduate Student Project Advisor <i>(Fall 2013-present)</i></li>
-    <li><a
-      href="http://www.engineering.cornell.edu/curie">CURIE Academy Teaching Assistant</a> <i>(July 2012)</i></li>
-    <li><a href="http://cornell-asl.org">Cornell University Autonomous Systems Lab Student Project Advisor</a> <i>(Fall 2011)</i></li>
-    <li>Cornell Computer Science Teaching Assistant: [<a href = "http://www.cs.cornell.edu/courses/CS2110/2009sp/">CS 2110</a>][<a href = "http://www.cs.cornell.edu/courses/CS5846/2010fa/5846-10policy.html">CS 5846</a>]</li>
-    <li><a href = "http://new.wellesley.edu/pltc">Wellesley College Pforzheimer Learning and Teaching Center Tutor</a><i>(2004-07)</i></li>
-    <li>Caltech Women Mentoring Women Program, Cornell SWE Mentor, Cornell CSGO-ACSU Mentor</li>
-
-	
-  
-  </ul>
-
-
-  </p>
-
- 
-  <h3>Service</h3>
-
-<p> 
-I was Conference Co-Chair and Fundraising Chair for the 2013 Cornell <a href = "http://www.ccmr.cornell.edu/education/eyh/">Expanding Your Horizons</a> Conference. EYH aims to stimulate the interest of young girls in math and science, provide them with female scientist role models, and foster awareness of math and science career opportunities. This is a cause dear to me, and I have been involved since my first year in grad school, in a number of capacities.
-</p>
-
-<p>
-In the summer of 2011, I ran a communication skills summer course at the MacCormick Secure Center in Brooktondale, NY. MacCormick is a maximum security correctional facility for young men aged 16-21 who have committed violent crimes. Topics covered included techniques for thought organization, and job interview preparation. We worked primarily with young men close to being released, and focused on preparing them to take full advantage of their employment opportunities.
-</p>
-
-<p>
-I was a founding member of the Cornell University Computer Science Graduate Organization, and served as its Social Chair from 2009-2011, coordinating department-wide graduate student social events several times a semester.
-</p>
-
- <h3>Misc. Interests</h3>
-
-<p>
-I enjoy dancing of all sorts, including several forms of partner dancing. I am also trained in Bharatanatyam, and performed with  <a href = "https://www.facebook.com/cornellsitara">Cornell Sitara</a> throughout graduate school; our style is best, if somewhat nebulously, described as South Asian fusion.
-
-<p>
-In college, I was a volunteer and instructor for Girls' Lifetime Empowerment and Awareness Program (LEAP), an education program in the Greater Boston area that blends physical skills with self-reflective activities, to foster safety, self-defense and courage in girls, women and their families.
-</p>
-
-<p>
-I also have a somewhat significant history with College Mock Trial.
-
-</td>
- 
-
-  </p>
-	</div>
-	<div id="footer">
-		<p>&copy; 2021 Vasumathi Raman.  Last updated January 28, 2021.</p>
-	</div>
-   </body>
+</body>
 </html>
